@@ -1,6 +1,30 @@
+import { useEffect, useRef, useState } from "react";
 import { highlightsSlides } from "../constants";
 
 const VideoCarousel = () => {
+  const videoRef = useRef([]);
+  const videoSpanRef = useRef([]);
+  const videoDivRef = useRef([]);
+
+  const [video, setVideo] = useState({
+    isEnd: false,
+    startPlay: false,
+    videoId: 0,
+    isLastVideo: false,
+    isPlaying: false,
+  });
+
+  const { isEnd, startPlay, videoId, isLastVideo, isPlaying } = video;
+
+  //   useEffect(() => {
+  //     const currentProgress = 0;
+  //     let span = videoSpanRef.current();
+
+  //     if (span[videoId]) {
+  //       // animate the progress of the video
+  //     }
+  //   }, [videoId, startPlay]);
+
   return (
     <>
       <div className="flex items-center">
