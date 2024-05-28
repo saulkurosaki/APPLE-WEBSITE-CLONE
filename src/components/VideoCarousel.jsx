@@ -37,28 +37,31 @@ const VideoCarousel = () => {
     });
   }, [isEnd, videoId]);
 
-  //   useEffect(() => {
-  //     if (loadedData.length > 3) {
-  //       if (!isPlaying) {
-  //         videoRef.current[videoId].pause();
-  //       } else {
-  //         isPlaying && videoRef.current[videoId].play();
-  //       }
-  //     }
-  //   }, [startPlay, videoId, isPlaying, loadedData]);
+  useEffect(() => {
+    if (loadedData.length > 3) {
+      if (!isPlaying) {
+        videoRef.current[videoId].pause();
+      } else {
+        isPlaying && videoRef.current[videoId].play();
+      }
+    }
+  }, [startPlay, videoId, isPlaying, loadedData]);
 
-  //   useEffect(() => {
-  //     const currentProgress = 0;
-  //     let span = videoSpanRef.current();
+  useEffect(() => {
+    const currentProgress = 0;
+    let span = videoSpanRef.current();
 
-  //     if (span[videoId]) {
-  //       // animate the progress of the video
-  //       let anim = gsap.to(span[videoId], {
-  //         onUpdate: () => {},
-  //         onComplete: () => {},
-  //       });
-  //     }
-  //   }, [videoId, startPlay]);
+    if (span[videoId]) {
+      // animate the progress of the video
+      let anim = gsap.to(span[videoId], {
+        onUpdate: () => {},
+        onComplete: () => {},
+      });
+    }
+  }, [videoId, startPlay]);
+
+  const handleLoadedMetadata = (i, e) =>
+    setLoadedData((prevVideo) => [...prevVideo, e]);
 
   const handleProcess = (type, i) => {
     switch (type) {
@@ -110,6 +113,7 @@ const VideoCarousel = () => {
                       isPlaying: true,
                     }));
                   }}
+                  onLoadedMetadata={(e) => handleLoadedMetadata(i, e)}
                 >
                   <source src={list.video} type="video/mp4" />
                 </video>
