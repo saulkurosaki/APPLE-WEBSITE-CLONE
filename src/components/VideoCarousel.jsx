@@ -80,7 +80,7 @@ const VideoCarousel = () => {
 
       <div className="relative flex-center mt-10">
         <div className="flex-center py-5 px-7 bg-gray-300 backdrop-blur rounded-full">
-          {/* {videoRef.current.map((_, i) => (
+          {videoRef.current.map((_, i) => (
             <span
               key={i}
               ref={(el) => (videoDivRef.current[i] = el)}
@@ -91,7 +91,7 @@ const VideoCarousel = () => {
                 ref={(el) => (videoSpanRef.current[i] = el)}
               />
             </span>
-          ))} */}
+          ))}
         </div>
       </div>
     </>
