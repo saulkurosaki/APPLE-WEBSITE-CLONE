@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { highlightsSlides } from "../constants";
+import gsap from "gsap";
 
 const VideoCarousel = () => {
   const videoRef = useRef([]);
@@ -14,16 +15,32 @@ const VideoCarousel = () => {
     isPlaying: false,
   });
 
+  const [loadedData, setLoadedData] = useState([]);
+
   const { isEnd, startPlay, videoId, isLastVideo, isPlaying } = video;
 
-  //   useEffect(() => {
-  //     const currentProgress = 0;
-  //     let span = videoSpanRef.current();
+  useEffect(() => {
+    if (loadedData.length > 3) {
+      if (!isPlaying) {
+        videoRef.current[videoId].pause();
+      } else {
+        isPlaying && videoRef.current[videoId].play();
+      }
+    }
+  }, [startPlay, videoId, isPlaying, loadedData]);
 
-  //     if (span[videoId]) {
-  //       // animate the progress of the video
-  //     }
-  //   }, [videoId, startPlay]);
+  useEffect(() => {
+    const currentProgress = 0;
+    let span = videoSpanRef.current();
+
+    if (span[videoId]) {
+      // animate the progress of the video
+      let anim = gsap.to(span[videoId], {
+        onUpdate: () => {},
+        onComplete: () => {},
+      });
+    }
+  }, [videoId, startPlay]);
 
   return (
     <>
@@ -32,7 +49,19 @@ const VideoCarousel = () => {
           <div key={list.id} id="slider" className="sm:pr-20 pr-10">
             <div className="video-carousel_container">
               <div className="w-full h-full flex-center rounded-3xl overflow-hidden bg-black">
-                <video id="video" playsInline={true} preload="auto" muted>
+                <video
+                  id="video"
+                  playsInline={true}
+                  preload="auto"
+                  muted
+                  ref={(el) => (videoRef.current[i] = el)}
+                  onPlay={() => {
+                    setVideo((prevVideo) => ({
+                      ...prevVideo,
+                      isPlaying: true,
+                    }));
+                  }}
+                >
                   <source src={list.video} type="video/mp4" />
                 </video>
               </div>
