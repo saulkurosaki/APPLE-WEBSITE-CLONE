@@ -1,4 +1,14 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
 const Highlights = () => {
+  useGSAP(() => {
+    gsap.to("#title", {
+      opacity: 1,
+      y: 0,
+    });
+  }, []);
+
   return (
     <section
       id="highlights"
