@@ -8,6 +8,11 @@ const Highlights = () => {
       opacity: 1,
       y: 0,
     });
+
+    gsap.to(".link", {
+      opacity: 1,
+      y: 0,
+    });
   }, []);
 
   return (
