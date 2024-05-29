@@ -75,8 +75,34 @@ const VideoCarousel = () => {
             });
           }
         },
-        onComplete: () => {},
+        onComplete: () => {
+          if (isPlaying) {
+            gsap.to(videoDivRef.current[videoId], {
+              width: "12px",
+            });
+
+            gsap.to(span[videoId], {
+              backgroundColor: "#afafaf",
+            });
+          }
+        },
       });
+
+      if (videoId === 0) {
+        anim.restart();
+      }
+
+      const animUpdate = () => {
+        anim.progress(
+          videoRef.current[videoId] / highlightsSlides[videoId].videoDuration
+        );
+      };
+
+      if (isPlaying) {
+        gsap.ticker.add(animUpdate);
+      } else {
+        gsap.ticker.remove(animUpdate);
+      }
     }
   }, [videoId, startPlay]);
 
