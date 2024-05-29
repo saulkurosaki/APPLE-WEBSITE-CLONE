@@ -47,19 +47,19 @@ const Model = () => {
       );
     }
 
-    // if (size === "small") {
-    //   animateWithGsapTimeline(
-    //     timeline,
-    //     large,
-    //     largeRotation,
-    //     "#view2",
-    //     "#view1",
-    //     {
-    //       transform: "translateX(0)",
-    //       duration: 2,
-    //     }
-    //   );
-    // }
+    if (size === "small") {
+      animateWithGsapTimeline(
+        timeline,
+        large,
+        largeRotation,
+        "#view2",
+        "#view1",
+        {
+          transform: "translateX(0)",
+          duration: 2,
+        }
+      );
+    }
   }, [size]);
 
   useGSAP(() => {
