@@ -19,8 +19,8 @@ const Model = () => {
   const cameraControlLarge = useRef();
 
   // model
-  //   const small = useRef(new THREE.Group());
-  //   const large = useRef(new THREE.Group());
+  const small = useRef(new THREE.Group());
+  const large = useRef(new THREE.Group());
 
   // rotation
   //   const [smallRotation, setSmallRotation] = useState(0);
