@@ -1,7 +1,8 @@
+import { Suspense } from "react";
 import { PerspectiveCamera, View } from "@react-three/drei";
 
 import Lights from "./Lights";
-import { Suspense } from "react";
+import IPhone from "./IPhone";
 
 const ModelView = ({
   index,
@@ -27,7 +28,9 @@ const ModelView = ({
 
       <Lights />
 
-      <Suspense fallback={<div>Loading</div>}></Suspense>
+      <Suspense fallback={<div>Loading</div>}>
+        <IPhone />
+      </Suspense>
     </View>
   );
 };
