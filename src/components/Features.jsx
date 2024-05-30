@@ -9,6 +9,17 @@ const Features = () => {
 
   useGSAP(() => {
     animateWithGsap("#features_title", { y: 0, opacity: 1 });
+    animateWithGsap(
+      ".g_grow",
+      {
+        scale: 1,
+        opacity: 1,
+        ease: "power1",
+      },
+      {
+        scrub: 5.5,
+      }
+    );
   }, []);
 
   return (
@@ -51,7 +62,9 @@ const Features = () => {
                     alt="titanium"
                     className="feature-video g_grow"
                   />
+                </div>
 
+                <div className="overflow-hidden flex-1 h-[50vh]">
                   <img
                     src={explore2Img}
                     alt="titanium2"
