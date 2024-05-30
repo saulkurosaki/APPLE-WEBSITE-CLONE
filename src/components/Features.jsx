@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { animateWithGsap } from "../utils/animations";
 
-import { explore1Img, exploreVideo } from "../utils";
+import { explore1Img, explore2Img, exploreVideo } from "../utils";
 
 const Features = () => {
   const videoRef = useRef();
@@ -49,6 +49,12 @@ const Features = () => {
                   <img
                     src={explore1Img}
                     alt="titanium"
+                    className="feature-video g_grow"
+                  />
+
+                  <img
+                    src={explore2Img}
+                    alt="titanium2"
                     className="feature-video g_grow"
                   />
                 </div>
