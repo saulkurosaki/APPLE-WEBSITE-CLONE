@@ -77,13 +77,13 @@ const HowItWorks = () => {
               </p>
             </div>
 
-            {/* <p className="hiw-text g_fadeIn">
+            <p className="hiw-text g_fadeIn">
               Mobile{" "}
               <span className="text-white">
                 games will look and feel so immersive
               </span>
               , with incredibly detailed environments and characters.
-            </p> */}
+            </p>
           </div>
         </div>
       </div>
