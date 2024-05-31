@@ -1,9 +1,34 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 # APPLE WEBSITE CLONE
+
+![alt text](1-Xnip2024-05-30_21-08-14.jpg)
+![alt text](2-Xnip2024-05-30_21-09-50.jpg)
+![alt text](3-Xnip2024-05-30_21-10-36.jpg)
+![alt text](4-Xnip2024-05-30_21-11-28.jpg)
+![alt text](5-Xnip2024-05-30_21-11-51.jpg)
+![alt text](6-Xnip2024-05-30_21-12-35.jpg)
+![alt text](7-Xnip2024-05-30_21-13-15.jpg)
+![alt text](8-Xnip2024-05-30_21-13-48.jpg)
+![alt text](9-Xnip2024-05-30_21-14-13.jpg)
+![alt text](10-Xnip2024-05-30_21-14-32.jpg)
+![alt text](11-Xnip2024-05-30_21-14-45.jpg)
+![alt text](12-Xnip2024-05-30_21-15-12.jpg)
+![alt text](13-Xnip2024-05-30_21-15-24.jpg)
+![alt text](14-Xnip2024-05-30_21-15-40.jpg)
+![alt text](15-Xnip2024-05-30_21-16-05.jpg)
+![alt text](16-Xnip2024-05-30_21-16-17.jpg)
+![alt text](17-Xnip2024-05-30_21-16-31.jpg)
+![alt text](18-Xnip2024-05-30_21-16-40.jpg)
+![alt text](19-Xnip2024-05-30_21-16-55.jpg)
+![alt text](20-Xnip2024-05-30_21-17-07.jpg)
+![alt text](21-Xnip2024-05-30_21-17-19.jpg)
+![alt text](22-Xnip2024-05-30_21-17-31.jpg)
+![alt text](23-Xnip2024-05-30_21-17-45.jpg)
+![alt text](24-Xnip2024-05-30_21-18-49.jpg)
+![alt text](25-Xnip2024-05-30_21-19-01.jpg)
+![alt text](26-Xnip2024-05-30_21-19-45.jpg)
+![alt text](27-Xnip2024-05-30_21-19-55.jpg)
+![alt text](28-Xnip2024-05-30_21-20-08.jpg)
+![alt text](29-Xnip2024-05-30_21-20-26.jpg)
+![alt text](30-Xnip2024-05-30_21-20-55.jpg)
+![alt text](31-Xnip2024-05-30_21-21-10.jpg)
+![alt text](32-Xnip2024-05-30_21-21-30.jpg)
