@@ -61,6 +61,10 @@ const HowItWorks = () => {
               </video>
             </div>
           </div>
+
+          <p className="text-gray font-semibold text-center mt-3">
+            Honkai: Star Rail
+          </p>
         </div>
       </div>
     </section>
